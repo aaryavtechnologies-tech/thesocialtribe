@@ -165,9 +165,16 @@ body {
 }
 
 .btn-satin.btn-hero {
-  font-size: 1.05rem;
-  padding: 0.95rem 2rem;
-  box-shadow: 0 6px 25px var(--satin-glow);
+  font-size: 1.12rem;
+  padding: 1.05rem 2.4rem;
+  box-shadow: 0 8px 30px var(--satin-glow), 0 0 15px rgba(216, 27, 96, 0.25);
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.02em;
+}
+
+.btn-satin.btn-hero:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 35px var(--satin-glow), 0 0 25px rgba(216, 27, 96, 0.4);
 }
 
 .btn-satin.btn-block {
@@ -1519,31 +1526,36 @@ body {
   color: var(--text-muted);
 }
 
-/* Floating Sticky WhatsApp (Universal Single CTA) */
+/* Floating Sticky WhatsApp (Universal Single CTA - Prominent & Big) */
 .floating-satin-cta {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 28px;
+  right: 28px;
   z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.8rem;
   background: var(--grad-satin-btn);
   color: #ffffff !important;
   text-decoration: none;
   font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  padding: 0.9rem 1.65rem;
+  font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  padding: 1.15rem 2.4rem;
   border-radius: 999px;
-  border: 1.5px solid rgba(255, 255, 255, 0.45);
-  box-shadow: 0 8px 32px rgba(216, 27, 96, 0.45), 0 0 20px rgba(230, 35, 114, 0.35);
-  transition: all 0.3s var(--ease-smooth);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 42px rgba(216, 27, 96, 0.65), 0 0 32px rgba(230, 35, 114, 0.5);
+  transition: all 0.35s var(--ease-smooth);
+}
+.floating-satin-cta .svg-ico {
+  width: 1.6em;
+  height: 1.6em;
+  flex-shrink: 0;
 }
 .floating-satin-cta:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 38px rgba(216, 27, 96, 0.65), 0 0 28px rgba(230, 35, 114, 0.5);
-  filter: brightness(1.08);
+  transform: translateY(-5px) scale(1.06);
+  box-shadow: 0 16px 48px rgba(216, 27, 96, 0.75), 0 0 38px rgba(230, 35, 114, 0.6);
+  filter: brightness(1.1);
 }
 
 .floating-pulse-ring {
@@ -1614,15 +1626,22 @@ body {
     flex-shrink: 0;
   }
 
-  .floating-satin-cta span.label-text { display: none; }
   .floating-satin-cta {
-    width: 48px;
-    height: 48px;
-    padding: 0;
-    border-radius: 50%;
-    justify-content: center;
-    bottom: 18px;
-    right: 18px;
+    bottom: 22px;
+    right: 20px;
+    padding: 1rem 1.9rem;
+    font-size: 1.08rem;
+    gap: 0.7rem;
+    border-radius: 999px;
+    width: auto;
+    height: auto;
+    box-shadow: 0 10px 35px rgba(216, 27, 96, 0.65), 0 0 25px rgba(230, 35, 114, 0.45);
+  }
+  .floating-satin-cta span.label-text { display: inline-block; }
+  .floating-satin-cta .svg-ico {
+    width: 1.5em;
+    height: 1.5em;
+    flex-shrink: 0;
   }
 
   /* TOAST ON MOBILE: Small, Sleek, Solid Opaque Background, Never Full Width! */
@@ -1728,11 +1747,25 @@ body {
     line-height: 1.25 !important;
   }
 
+  .hero-cta-group {
+    width: 100%;
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: center;
+  }
+
   .btn-satin.btn-hero {
     width: 100% !important;
-    max-width: 100% !important;
-    padding: 0.85rem 1.2rem !important;
-    font-size: clamp(0.88rem, 3.8vw, 1rem) !important;
+    max-width: 360px !important;
+    padding: 0.95rem 1.6rem !important;
+    font-size: 1.05rem !important;
+    font-weight: 800 !important;
+    box-shadow: 0 8px 25px rgba(216, 27, 96, 0.45) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 999px !important;
+    text-align: center !important;
   }
 
   .btn-satin.btn-block {
@@ -1777,9 +1810,26 @@ body {
   .cutout-couple { width: 62px; top: 52vh; right: -10px; }
 
   .floating-satin-cta {
-    bottom: 18px;
-    right: 18px;
-    padding: 0.78rem 1.35rem;
-    font-size: 0.88rem;
+    bottom: 20px !important;
+    right: 16px !important;
+    padding: 0.95rem 1.7rem !important;
+    font-size: 1.05rem !important;
+    gap: 0.65rem !important;
+    border-width: 2px !important;
+    border-radius: 999px !important;
+    box-shadow: 0 10px 35px rgba(216, 27, 96, 0.7), 0 0 25px rgba(230, 35, 114, 0.45) !important;
+    width: auto !important;
+    height: auto !important;
+    display: inline-flex !important;
+  }
+  .floating-satin-cta span.label-text {
+    display: inline-block !important;
+    font-size: 1.02rem !important;
+    font-weight: 800 !important;
+  }
+  .floating-satin-cta .svg-ico {
+    width: 1.5em !important;
+    height: 1.5em !important;
+    flex-shrink: 0 !important;
   }
 }
