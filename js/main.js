@@ -417,5 +417,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 8. Meta Pixel Conversion Tracking for WhatsApp CTAs (Lead & Contact Events)
+  const trackWhatsAppClick = (btnName) => {
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Contact', { content_name: btnName });
+      window.fbq('track', 'Lead', { content_name: btnName });
+    }
+  };
+
+  const heroCta = document.getElementById('hero-main-cta');
+  if (heroCta) {
+    heroCta.addEventListener('click', () => trackWhatsAppClick('Hero WhatsApp CTA'));
+  }
+
+  const floatingCta = document.getElementById('floating-satin-btn');
+  if (floatingCta) {
+    floatingCta.addEventListener('click', () => trackWhatsAppClick('Floating WhatsApp CTA'));
+  }
+
 });
+
 
